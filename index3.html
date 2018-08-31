@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<link href="https://unpkg.com/c3/c3.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="https://unpkg.com/d3" type="text/javascript"></script>
+<script src="https://unpkg.com/c3" type="text/javascript"></script>
+
+<div id="chart"></div>
+
+<script>
+c3.generate({
+	"padding": {
+		"top": 8,
+		"left": 80,
+		"right": 80,
+		"bottom": 8
+	},
+	"color": {
+		"pattern": ["#ae20e5", "#ccc"]
+	},
+	"data": {
+		"type": "line",
+		"types": {
+			"sales": "bar"
+		},
+		"x": "x",
+		"xFormat": "%Y-%m-%d",
+		"y": "y",
+		"y2": "y2",
+		"json": {
+			"x": [ '2017-04-30',
+  '2017-05-01',
+  '2017-05-02',
+  '2017-05-03',
+  '2017-05-04',
+  '2017-05-05',
+  '2017-05-06',
+  '2017-05-07',
+  '2017-05-08',
+  '2017-05-09',
+  '2017-05-10',
+  '2017-05-11',
+  '2017-05-12',
+  '2017-05-13',
+  '2017-05-14',
+  '2017-05-15',
+  '2017-05-16',
+  '2017-05-17',
+  '2017-05-18',
+  '2017-05-19',
+  '2017-05-20',
+  '2017-05-21',
+  '2017-05-22',
+  '2017-05-23',
+  '2017-05-24',
+  '2017-05-25',
+  '2017-05-26',
+  '2017-05-27',
+  '2017-05-28',
+  '2017-05-29',
+  '2017-05-30' ],
+			"sales": [0, 0, 0, 0, 0, 0, 0, 0, 0, -939600, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			"customer": [0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		},
+		"names": {
+			"sales": "Sales",
+			"customer": "Customers"
+		},
+		"axes": {
+			"sales": "y2",
+			"customer": "y"
+		},
+		"selection": {
+			"grouped": true
+		}
+	},
+	"bar": {
+		"width": {
+			"ratio": 0.6
+		}
+	},
+	"axis": {
+		"x": {
+			"type": "timeseries",
+			"tick": {
+				"outer": false,
+				"culling": {
+					"max": 1
+				}
+			}
+		},
+		"y": {
+			"min": 0,
+			"tick": {
+				"outer": false
+			},
+			"padding": {
+				"top": 20,
+				"bottom": 0
+			}
+		},
+		"y2": {
+			"show": true,
+			"min": 0,
+      "max": 1000,
+			"tick": {
+				"outer": false
+			},
+			"padding": {
+				"top": 20,
+				"bottom": 0
+			}
+		}
+	},
+	"grid": {
+		"x": {
+			"show": true
+		},
+		"y": {
+			"show": true
+		}
+	},
+	"point": {
+		"r": 5
+	},
+	"tooltip": {
+		"format": {}
+	},
+	"legend": {
+		"item": {}
+	}
+});
+</script>
